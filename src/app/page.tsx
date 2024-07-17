@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <HydrateClient>
       <main className="min-h-screen bg-black text-white">
-        <h1>hi</h1>
+        <h1>can u see this my nig?</h1>
       </main>
     </HydrateClient>
   );
