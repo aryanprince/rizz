@@ -1,0 +1,1 @@
+ALTER TABLE "rizz_user" ADD COLUMN "aids_col" varchar(2);
