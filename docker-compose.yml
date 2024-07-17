@@ -1,0 +1,28 @@
+version: "3.9"
+
+name: rizz-postgres
+
+services:
+  # This is your local Postgres database instance
+  postgres-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: rizz
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
+    volumes:
+      - rizz-data:/var/lib/postgresql/data
+    ports:
+      - "6969:5432" # Access the DB at port 6969
+
+  # Use Adminer to quickly view the database at localhost:9696
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "9696:8080"
+
+volumes:
+  rizz-data:
+    driver: local
